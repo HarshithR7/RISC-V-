@@ -94,9 +94,9 @@ module riscv_processor(
         .branch(branch),
         .jump(jump),
         .alu_src(alu_src),
-        .alu_op(alu_op),                    // Corrected to match width (4 bits)
+        .alu_op(alu_op),                    
         .alu_result(alu_result),
-        .mem_addr(mem_addr),                // Corrected to match width (32 bits)
+        .mem_addr(mem_addr),               
         .next_pc(next_pc),
         .branch_taken(branch_taken)
     );
@@ -106,10 +106,10 @@ module riscv_processor(
         .clk(clk),
         .mem_read(mem_read),
         .mem_write(mem_write),
-        .func3(func3),                      // Corrected to match width (3 bits)
-        .mem_addr(mem_addr),                // Corrected to match width (32 bits)
+        .func3(func3),                      
+        .mem_addr(mem_addr),                
         .write_data(alu_result),            // Data from rs2 in register file
-        .read_data(output_mem_read)               // Corrected to match width (32 bits)
+        .read_data(output_mem_read)               
     );
 
 endmodule
